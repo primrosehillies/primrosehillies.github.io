@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Test</title>
+
+    <style>
+        html, body {
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            background:black;
+            overflow:hidden;
+        }
+
+        #mainDiv {
+            width:500px;
+            height:500px;
+            margin:200px auto;
+            perspective:800px;
+        }
+
+        #boxDiv {
+            width:500px;
+            height:500px;
+            transform-style:preserve-3d;
+            transform:translateZ(500px);
+        }
+
+        #boxDiv div {
+            width:500px;
+            height:500px;
+            position:absolute;
+        }
+
+        #front {
+            transform: translateZ(250px) rotateY(180deg);
+
+        }
+
+        #back {
+            transform: translateZ(-250px);
+        }
+
+        #left {
+            transform: rotateY(90deg) translateX(-250px);
+            transform-origin:left;
+        }
+
+        #right {
+            transform: rotateY(-90deg) translateX(250px);
+            transform-origin:right;
+
+        }
+
+        #top {
+            transform: rotateX(90deg) translateY(-250px);
+            transform-origin:top;
+        }
+
+        #bottom {
+            transform: rotateX(90deg) translateY(250px);
+            transform-origin:bottom;
+        }
+
+        img {
+            width:500px;
+            height:500px;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainDiv">
+        <div id="boxDiv">
+            <div id="front"><img src="i-g/rainbow/front.png"></div>
+            <div id="back"><img src="i-g/rainbow/back.png"></div>
+            <div id="left"><img src="i-g/rainbow/left.png"></div>
+            <div id="right"><img src="i-g/rainbow/right.png"></div>
+            <div id="top"><img src="i-g/rainbow/top.png"></div>
+            <div id="bottom"><img src="i-g/rainbow/bottom.png"></div>
+        </div>
+    </div>
+
+    <script>
+        var world = document.getElementById("boxDiv");
+        var x;
+        var y;
+
+        document.addEventListener('mousemove', function(e)
+        {
+            x = e.clientX;
+            y = e.clientY;
+            y = -y;
+            world.style.transform = "translateZ(600px) rotateX("+y+"deg) rotateY("+x+"deg)";
+        });
+    </script>
+
+</body>
+</html>

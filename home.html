@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Welcome Home</title>
+        <link rel="shortcut icon" type="image/png" href="i-g/leaf.png">
+
+        <style>
+            @font-face {
+                font-family: angelots;
+                src: url('fonts/kingarthur.ttf');
+            }
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                margin: 0; /* remove default margin */
+                padding: 0; /* remove default padding */
+                
+            }
+
+            h1 {
+                font-weight:normal;
+                font-size:100px;
+                color:wheat;
+                text-align:center;
+                font-family: angelots;
+            }
+            .eye1 {
+                display:flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100vh;
+                background-image:url(i-g/eye_slow_dark_min_2.gif);
+                background-repeat:repeat-y;
+                background-position: center;
+                background-attachment:fixed;
+                background-size:100px 100px;
+                animation: move-background-vertically 30s linear infinite;
+                animation-iteration-count: infinite;
+                background-color:#960000;
+            }
+
+
+            .eye2 {
+                height: 50vh;
+                background-image:url(i-g/eye_slow_dark_min_purple.gif);
+                background-repeat:repeat-x;
+                background-position: right center;
+                background-attachment:scroll;
+                background-size:100px 100px;
+                animation: move-background-horizontally 5s linear infinite;
+                animation-iteration-count: infinite;
+                background-color:#7906BC;
+            }
+
+            @keyframes move-background-vertically {
+                0% {
+                    background-position: center 0;
+                }
+                100% {
+                    background-position: center 100%;
+                }
+            }
+
+            @keyframes move-background-horizontally {
+                0% {
+                    background-position: right center;
+                }
+                100% {
+                    background-position: left center;
+                }
+            }
+
+            .welcome {
+                overflow:hidden;
+                background-image: url(backgrounds/085c.jpg);
+                background-size:100px;
+                background-attachment: fixed;
+                border-top: 2px groove #206477;
+                border-bottom: 2px groove #206477;
+
+            }
+
+            .welcome-sidebar {
+                background-image: url(backgrounds/pat0107.png);
+                background-size:30px;
+                float:left;
+                width: 300px;
+                text-align:center;
+                border-right: 2px groove #206477;
+                padding-top:20px;
+                background-attachment: scroll;
+            }
+
+            .welcome-sidebar div {
+                margin:10px;
+                border-radius: 2px;
+                border-style:dotted;
+                border-color:yellowgreen;
+                color:#FF97F8;
+                padding:5px;
+                background-image:url(backgrounds/fract_dark.jpg);
+                margin-bottom:15px;
+                background-attachment: fixed;
+            }
+
+            .welcome-sidebar img {
+                height:230px;
+            }
+
+            .welcome-content {
+                text-align:center;
+                color:wheat;
+                
+                padding-top: 50px;
+                overflow:hidden;
+
+            }
+
+
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="eye1">
+            <h1 style="vertical-align:middle;">
+                (PRIMROSE)<br>(HILLS)</h1>
+        </div>
+        <div class="welcome">
+            <div class="welcome-sidebar">
+                <marquee><h2 style="color:aquamarine">News from the organization</h2></marquee>
+                <div class="answer">
+                    <p>Interdimensional meeting with great leaders starting soon (you should hop in, they're pretty pissed!)</p>
+                    <a href="interdimensional-call.html"><img src="i-g/answer-now/answer-now.gif"></a>
+                </div>
+                <div class="soup">
+                    <img src="i-g/eatsoup/eatsoupnow.gif">
+                </div>
+                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            </div>
+            <div class="welcome-content">
+                Hello there, welcome home. <br>
+                We were waiting for you!<br>
+                Take a seat, relax.<br><br>
+                
+                <h2>First music from the cult now available on Youtube! With a beautiful animation!</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/529aq-1Qr2o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>
+                <br>
+                
+                <img src="i-g/butterflies.jpg" style="height:300px;"><br><br>
+                <a href="paien.html" style="color:white;">Thinking about joining the cult...?</a>
+            </div>
+        </div>
+        <div class="eye2">
+
+        </div>
+    </body>
+</html>
