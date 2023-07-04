@@ -5,6 +5,7 @@
 
         <title>Welcome Home</title>
         <link rel="shortcut icon" type="image/png" href="i-g/leaf.png">
+        <link rel="stylesheet" href="styles.css">
 
         <style>
             @font-face {
@@ -148,6 +149,57 @@
             }
 
 
+            .newsletterfont {
+                color:yellowgreen; 
+                font-family:pixeloperator; 
+                margin-bottom:10px;
+            }
+
+            .subscribebutton {
+            font-family:pixeloperator;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #450585;
+            cursor: pointer;
+            border: 3px solid;
+            padding: 0.25em 0.5em;
+            box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+            position: relative;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+            margin-bottom:10px; 
+            cursor:url('cursors/link_select.cur'), pointer;
+            }
+
+            .subscribebutton:active {
+            box-shadow: 0px 0px 0px 0px;
+            top: 5px;
+            left: 5px;
+            }
+
+            @media (min-width: 768px) {
+            .subscribebutton {
+                padding: 0.25em 0.75em;
+            }
+            }
+
+            input {
+                background-color: rgb(59, 59, 59);
+                color:yellow;
+                font-family:pixeloperator;
+                padding-left:2px;
+            }
+
+            .inputs {
+                background-color:black;
+                border-radius: 2px;
+                border-style:dotted;
+                border-color:yellowgreen;
+            }
+
         </style>
 
         <script type="text/javascript">
@@ -170,6 +222,7 @@
             }
         </script>
 
+
     </head>
     <body>
 
@@ -184,34 +237,49 @@
                 <div id="newsletter">
                     <p style="color:orange; font-family:kalamaya; font-weight:normal; font-size:30px;">Subscribe to Primrose Mail</p>
                     <p style="color:yellowgreen; font-family:pixeloperator; margin-bottom:10px;">Stay in touch with the different projects from the Primrose Hills community!</p>
-                    <style type="text/css" scoped>
-                        .mauticform-field-hidden { display:none }
-                    </style>
                     
-                    <div id="mauticform_wrapper_homepageform" class="mauticform_wrapper">
-                        <form autocomplete="false" role="form" method="post" action="https://primmail.primrosehills.org/form/submit?formId=1" id="mauticform_homepageform" data-mautic-form="homepageform" enctype="multipart/form-data" name>
-                            <div class="mauticform-error" id="mauticform_homepageform_error"></div>
-                            <div class="mauticform-message" id="mauticform_homepageform_message"></div>
-                            <div class="mauticform-innerform">
-                                
-                              <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+                    <div class="newsletterfont">
+                        <style type="text/css" scoped>
+                            .mauticform-field-hidden { display:none }
+                        </style>
                     
-                                <div style="margin-bottom:10px;" id="mauticform_homepageform_homepageemail" data-validate="homepageemail" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-1 mauticform-required">
-                                    <input id="mauticform_input_homepageform_homepageemail" name="mauticform[homepageemail]" value="" class="mauticform-input" type="email">
-                                    <span class="mauticform-errormsg" style="display: none;">I want to receive Primrose Mail</span>
+                        <div id="mauticform_wrapper_homepageform" class="mauticform_wrapper inputs">
+                            <form autocomplete="false" role="form" method="post" action="https://primmail.primrosehills.org/form/submit?formId=1" id="mauticform_homepageform" data-mautic-form="homepageform" enctype="multipart/form-data" name>
+                                <div class="mauticform-error" id="mauticform_homepageform_error"></div>
+                                <div class="mauticform-message" id="mauticform_homepageform_message"></div>
+                                <div class="mauticform-innerform">
+                                    
+                                <div class="mauticform-page-wrapper mauticform-page-1 inputsnone" data-mautic-form-page="1">
+                        
+                                    <div class="inputs">
+                                        <div style="color:yellowgreen; font-family:pixeloperator; margin-bottom:10px;" id="mauticform_homepageform_homepageemail" data-validate="homepageemail" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-1 mauticform-required">
+                                            <label style="color:yellowgreen; font-family:pixeloperator; margin-bottom:10px;" id="mauticform_label_homepageform_homepageemail" for="mauticform_input_homepageform_homepageemail" class="mauticform-label">Email address:</label>
+                                            <input id="mauticform_input_homepageform_homepageemail" name="mauticform[homepageemail]" value="" class="mauticform-input" type="email">
+                                            <br><span class="mauticform-errormsg" style="display: none;">This is required! I need ur email address!!</span>
+                                        </div>
+                            
+                                        <div id="mauticform_homepageform_captcha" data-validate="captcha" data-validation-type="captcha" class="mauticform-row mauticform-text mauticform-field-2 mauticform-required">
+                                            <label style="color:yellowgreen; font-family:pixeloperator; margin-bottom:10px;" id="mauticform_label_homepageform_captcha" for="mauticform_input_homepageform_captcha" class="mauticform-label">What is 8 plus 10?</label>
+                                            <input id="mauticform_input_homepageform_captcha" name="mauticform[captcha]" value="" class="mauticform-input" type="text">
+                                            <br><span class="mauticform-errormsg" style="display: none; color:yellowgreen; font-family:pixeloperator;">This is required... You're a human, right?</span>
+                                        </div>
+                                    </div>
+
+
+                                    <div style="margin-top:10px;"id="mauticform_homepageform_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-3">
+                                        <button type="submit" name="mauticform[submit]" id="mauticform_input_homepageform_submit" value="" class="mauticform-button btn btn-default subscribebutton">Subscribe</button>
+                                    </div>
+                                    </div>
                                 </div>
-                                <div id="mauticform_homepageform_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-2">
-                                    <button type="submit" name="mauticform[submit]" id="mauticform_input_homepageform_submit" value="" class="mauticform-button btn btn-default">Subscribe</button>
-                                </div>
-                                </div>
-                            </div>
-                    
-                            <input type="hidden" name="mauticform[formId]" id="mauticform_homepageform_id" value="1">
-                            <input type="hidden" name="mauticform[return]" id="mauticform_homepageform_return" value="">
-                            <input type="hidden" name="mauticform[formName]" id="mauticform_homepageform_name" value="homepageform">
-                    
-                            </form>
+                        
+                                <input type="hidden" name="mauticform[formId]" id="mauticform_homepageform_id" value="1">
+                                <input type="hidden" name="mauticform[return]" id="mauticform_homepageform_return" value="">
+                                <input style="color:yellowgreen; font-family:pixeloperator; margin-bottom:10px;" type="hidden" name="mauticform[formName]" id="mauticform_homepageform_name" value="homepageform">
+                        
+                                </form>
+                        </div>
                     </div>
+                    
                     
                 </div>
                 <div class="answer" id="sidebar">
@@ -221,7 +289,7 @@
                 <div class="soup" id="sidebar">
                     <a href="https://www.youtube.com/watch?v=Dn_40K0er0E" target="_blank"><img src="i-g/eatsoup/eatsoupnow.gif"></a>
                 </div>
-                <br><br><br><br><br><br><br><br><br>
+                <br>
             </div>
             <div class="welcome-content">
                 Hello there, welcome home. <br>

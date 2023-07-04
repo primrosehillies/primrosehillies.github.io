@@ -1,0 +1,11 @@
+html, body {
+    cursor:url('cursors/windows_arrow.cur'), default;
+}
+
+a {
+    cursor:url('cursors/link_select.cur'), pointer;
+}
+
+button {
+    cursor:url('cursors/link_select.cur'), pointer;
+}
