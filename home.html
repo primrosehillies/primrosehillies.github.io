@@ -11,6 +11,17 @@
                 font-family: angelots;
                 src: url('fonts/kingarthur.ttf');
             }
+
+            @font-face {
+                font-family: kalamaya;
+                src: url('fonts/kalamaya.ttf');
+            }
+
+            @font-face {
+                font-family: pixeloperator;
+                src: url('fonts/pixeloperator.ttf');
+            }
+
             * {
                 margin: 0;
                 padding: 0;
@@ -96,12 +107,11 @@
                 background-attachment: scroll;
             }
 
-            .welcome-sidebar div {
+            .welcome-sidebar #sidebar {
                 margin:10px;
                 border-radius: 2px;
                 border-style:dotted;
                 border-color:yellowgreen;
-                color:#FF97F8;
                 padding:5px;
                 background-image:url(backgrounds/fract_dark.jpg);
                 margin-bottom:15px;
@@ -121,13 +131,49 @@
 
             }
 
+            .answer {
+                color:#FF97F8;
+            }
 
-
+            .welcome-sidebar #newsletter {
+                margin:10px;
+                border-radius: 2px;
+                border-style:dotted;
+                border-color:yellowgreen;
+                padding:5px;
+                background-image:url(backgrounds/4.gif);
+                background-size:50px;
+                margin-bottom:15px;
+                background-attachment: fixed;
+            }
 
 
         </style>
+
+        <script type="text/javascript">
+            if (typeof MauticSDKLoaded == 'undefined') {
+                var MauticSDKLoaded = true;
+                var head            = document.getElementsByTagName('head')[0];
+                var script          = document.createElement('script');
+                script.type         = 'text/javascript';
+                script.src          = 'https://primmail.primrosehills.org/media/js/mautic-form.js?v970f0a02';
+                script.onload       = function() {
+                    MauticSDK.onLoad();
+                };
+                head.appendChild(script);
+                var MauticDomain = 'https://primmail.primrosehills.org';
+                var MauticLang   = {
+                    'submittingMessage': "Please wait..."
+                }
+            }else if (typeof MauticSDK != 'undefined') {
+                MauticSDK.onLoad();
+            }
+        </script>
+
     </head>
     <body>
+
+        </div>
         <div class="eye1">
             <h1 style="vertical-align:middle;">
                 (PRIMROSE)<br>(HILLS)</h1>
@@ -135,14 +181,47 @@
         <div class="welcome">
             <div class="welcome-sidebar">
                 <marquee><h2 style="color:aquamarine">News from the organization</h2></marquee>
-                <div class="answer">
+                <div id="newsletter">
+                    <p style="color:orange; font-family:kalamaya; font-weight:normal; font-size:30px;">Subscribe to Primrose Mail</p>
+                    <p style="color:yellowgreen; font-family:pixeloperator; margin-bottom:10px;">Stay in touch with the different projects from the Primrose Hills community!</p>
+                    <style type="text/css" scoped>
+                        .mauticform-field-hidden { display:none }
+                    </style>
+                    
+                    <div id="mauticform_wrapper_homepageform" class="mauticform_wrapper">
+                        <form autocomplete="false" role="form" method="post" action="https://primmail.primrosehills.org/form/submit?formId=1" id="mauticform_homepageform" data-mautic-form="homepageform" enctype="multipart/form-data" name>
+                            <div class="mauticform-error" id="mauticform_homepageform_error"></div>
+                            <div class="mauticform-message" id="mauticform_homepageform_message"></div>
+                            <div class="mauticform-innerform">
+                                
+                              <div class="mauticform-page-wrapper mauticform-page-1" data-mautic-form-page="1">
+                    
+                                <div style="margin-bottom:10px;" id="mauticform_homepageform_homepageemail" data-validate="homepageemail" data-validation-type="email" class="mauticform-row mauticform-email mauticform-field-1 mauticform-required">
+                                    <input id="mauticform_input_homepageform_homepageemail" name="mauticform[homepageemail]" value="" class="mauticform-input" type="email">
+                                    <span class="mauticform-errormsg" style="display: none;">I want to receive Primrose Mail</span>
+                                </div>
+                                <div id="mauticform_homepageform_submit" class="mauticform-row mauticform-button-wrapper mauticform-field-2">
+                                    <button type="submit" name="mauticform[submit]" id="mauticform_input_homepageform_submit" value="" class="mauticform-button btn btn-default">Subscribe</button>
+                                </div>
+                                </div>
+                            </div>
+                    
+                            <input type="hidden" name="mauticform[formId]" id="mauticform_homepageform_id" value="1">
+                            <input type="hidden" name="mauticform[return]" id="mauticform_homepageform_return" value="">
+                            <input type="hidden" name="mauticform[formName]" id="mauticform_homepageform_name" value="homepageform">
+                    
+                            </form>
+                    </div>
+                    
+                </div>
+                <div class="answer" id="sidebar">
                     <p>Interdimensional meeting with great leaders starting soon (you should hop in, they're pretty pissed!)</p>
                     <a href="interdimensional-call.html"><img src="i-g/answer-now/answer-now.gif"></a>
                 </div>
-                <div class="soup">
-                    <img src="i-g/eatsoup/eatsoupnow.gif">
+                <div class="soup" id="sidebar">
+                    <a href="https://www.youtube.com/watch?v=Dn_40K0er0E" target="_blank"><img src="i-g/eatsoup/eatsoupnow.gif"></a>
                 </div>
-                <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                <br><br><br><br><br><br><br><br><br>
             </div>
             <div class="welcome-content">
                 Hello there, welcome home. <br>
