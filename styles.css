@@ -1,3 +1,18 @@
+@font-face {
+    font-family: angelots;
+    src: url('fonts/kingarthur.ttf');
+}
+
+@font-face {
+    font-family: kalamaya;
+    src: url('fonts/kalamaya.ttf');
+}
+
+@font-face {
+    font-family: pixeloperator;
+    src: url('fonts/pixeloperator.ttf');
+}
+
 html, body {
     cursor:url('cursors/windows_arrow.cur'), default;
 }
